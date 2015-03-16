@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+<title>
+  
+    Mở đầu &middot; Bootstrap
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Documentation extras -->
+<link href="../assets/css/docs.min.css" rel="stylesheet">
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="icon" href="../assets/ico/favicon.ico">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-146052-10', 'getbootstrap.com');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Bootstrap</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="../getting-started">Mở đầu</a>
+        </li>
+        <li>
+          <a href="../css">CSS</a>
+        </li>
+        <li>
+          <a href="../components">Các thành phần</a>
+        </li>
+        <li>
+          <a href="../javascript">JavaScript</a>
+        </li>
+        <li>
+          <a href="../customize">Tùy chỉnh</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Triển lãm</a></li>
+        <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="content">
+      <div class="container">
+        <h1>Mở đầu</h1>
+        <p>Tổng quan về Bootstrap, cách tải về và hướng dẫn sử dụng, các ví dụ, các template cơ bản và hơn thế nữa.</p>
+        <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <div class="bs-docs-section">
+  <h1 id="download" class="page-header">Tải về</h1>
+
+  <p class="lead">Có một số cách rất đơn giản để bắt đầu với Bootstrap (phiên bản hiện tại v3.1.1), mỗi cách phù hợp với các trình độ và các nhu cầu khác nhau. Hãy đọc qua và xem cách nào phù hợp với nhu cầu cụ thể của bạn.</p>
+
+  <div class="row bs-downloads">
+    <div class="col-sm-4">
+      <h3 id="download-bootstrap">Bootstrap</h3>
+      <p>Chứa các tập tin CSS, JavaScript, và fonts đã được biên dịch và nén lại. Không bao gồm tài liệu và các tập tin mã nguồn gốc.</p>
+      <p>
+        <a href="https://github.com/twbs/bootstrap/releases/download/v3.1.1/bootstrap-3.1.1-dist.zip" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download Bootstrap</a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 id="download-source">Mã nguồn</h3>
+      <p>Chứa các tập tin mã nguồn Less, JavaScript, và các tập tin về font, cùng với tài liệu của chúng tôi. <strong>Yêu cầu một bộ biên dịch Less và <a href="https://github.com/twbs/bootstrap#compiling-css-and-javascript">một vài thiết lập</a></strong></p>
+      <p>
+        <a href="https://github.com/twbs/bootstrap/archive/v3.1.1.zip" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <h3 id="download-sass">Sass</h3>
+      <p><a href="https://github.com/twbs/bootstrap-sass">Bootstrap chuyển mã nguồn Less sang Sass</a> để có thể dễ dàng sử dụng trong các dự án Rails, Compass, hoặc chỉ riêng Sass.</p>
+      <p>
+        <a href="https://github.com/twbs/bootstrap-sass/archive/v3.1.1.tar.gz" class="btn btn-lg btn-outline" role="button" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Sass');">Download Sass</a>
+      </p>
+    </div>
+  </div>
+
+  <h3 id="download-cdn">Bootstrap CDN</h3>
+  <p>Ai đó ở <a href="http://www.maxcdn.com/">MaxCDN</a> hỗ trợ lưu trữ dạng CDN cho CSS và JavaScript của Bootstrap. Bạn chỉ cần sử dụng các liên kết <a href="http://www.bootstrapcdn.com/">Bootstrap CDN</a>.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Optional theme --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css&quot;</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></div>
+
+  <h3 id="download-bower">Cài đặt với Bower</h3>
+  <p>Cài đặt và quản lý các tập tin Less, CSS, JavaScript và font của Bootstrap bằng cách sử dụng <a href="http://bower.io">Bower</a>.</p>
+  <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>bower install bootstrap</code></pre></div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="whats-included" class="page-header">Bên trong có gì</h1>
+
+  <p class="lead">Bootstrap được tải về theo hai dạng, bên trong mỗi dạng bạn sẽ tìm thấy các tập tin và thư mục được nói dưới đây, nhóm các tài nguyên dùng chung một cách logic và cung cấp cả hai biến thể đã biên dịch và đã nén.</p>
+
+  <div class="bs-callout bs-callout-warning" id="jquery-required">
+    <h4>Yêu cầu phải có jQuery</h4>
+    <p>Hãy chú ý rằng <strong>toàn bộ các plugin JavaScript đều yêu cầu jQuery</strong> phải được tích hợp sẵn, như được nói đến trong phần <a href="#template">template khởi đầu</a>. <a href="https://github.com/twbs/bootstrap/blob/v3.1.1/bower.json">Hãy tham khảo tập tin <code>bower.json</code></a> để biết được phiên bản jQuery nào được hỗ trợ.</p>
+  </div>
+
+  <h2 id="whats-included-precompiled">Bootstrap đã biên dịch</h2>
+  <p>Khi tải về, hãy giải nén thư mục và bạn sẽ nhìn thấy cấu trúc của Bootstrap (đã biên dịch) tương tự như thế này:</p>
+<!-- NOTE: This info is intentionally duplicated in the README.
+Copy any changes made here over to the README too. -->
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bootstrap/
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.min.css
+│   ├── bootstrap-theme.css
+│   └── bootstrap-theme.min.css
+├── js/
+│   ├── bootstrap.js
+│   └── bootstrap.min.js
+└── fonts/
+    ├── glyphicons-halflings-regular.eot
+    ├── glyphicons-halflings-regular.svg
+    ├── glyphicons-halflings-regular.ttf
+    └── glyphicons-halflings-regular.woff</code></pre></div>
+
+  <p>Đây là dạng cơ bản nhất của Bootstrap, gồm các tập tin đã được biên dịch từ trước để có thể sử dụng một cách nhanh chóng trong tất cả các dự án web. Chúng tôi cung cấp các CSS và JS đã được biên dịch (<code>bootstrap.*</code>), cũng như CSS và JS đã được biên dịch và nén lại (<code>bootstrap.min.*</code>). Font Glyphicons cũng được tích hợp sẵn trong dạng này của Bootstrap.</p>
+
+  <h2 id="whats-included-source">Mã nguồn của Bootstrap</h2>
+  <p>Mã nguồn của Bootstrap bao gồm các tập tin CSS, JavaScript, font đã được biên dịch cùng với đó là mã nguồn Less, JavaScript và tài liệu hướng dẫn sử dụng. Cụ thể hơn, cấu trúc của nó tương tự như sau:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bootstrap/
+├── less/
+├── js/
+├── fonts/
+├── dist/
+│   ├── css/
+│   ├── js/
+│   └── fonts/
+└── docs/
+    └── examples/</code></pre></div>
+  <p>Các thư mục <code>less/</code>, <code>js/</code>, và <code>fonts/</code> là nơi lưu trữ mã nguồn CSS, JS và font của chúng tôi. Thư mục <code>dist/</code> lưu trữ toàn bộ những tập tin được biên dịch đã nói ở trên. Thư mục <code>docs/</code> lưu trữ mã nguồn của phần tài liệu hướng dẫn sử dụng, và thư mục <code>examples/</code> lưu trữ các ví dụ về cách sử dụng Bootstrap. Ngoài ra, các tập tin khác đi kèm được sử dụng để hỗ trợ cho việc đóng gói, cung cấp thông tin bản quyền và thông tin phát triển của Bootstrap.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="grunt" class="page-header">Biên dịch CSS và JavaScript</h1>
+
+  <p class="lead">Bootstrap sử dụng <a href="http://gruntjs.com">Grunt</a> để xây dựng hệ thống, với các phương thức thuận tiện khi làm việc với framework. Đây là cách mà chúng tôi biên dịch nên mã nguồn, chạy kiểm thử và nhiều hơn thế nữa.</p>
+
+  <h2 id="grunt-installing">Cài đặt Grunt</h2>
+  <p>Để cài đặt Grunt, <strong>trước hết <a href="http://nodejs.org/download/">bạn phải tải về và cài đặt node.js</a></strong> (đã bao gồm npm). npm là tên viết tắt của <a href="http://npmjs.org/">node packaged modules</a> và là một cách để quản lý sự phụ thuộc khi phát triển thông qua node.js.</p>
+
+  Sau đó từ màn hình giao diện dòng lệnh (command-line):
+  <ol>
+    <li>Cài đặt <code>grunt-cli</code> một cách toàn cục bằng lệnh <code>npm install -g grunt-cli</code>.</li>
+    <li>Chuyển đến thư mục làm việc <code>/bootstrap/</code>, sau đó chạy lệnh <code>npm install</code>. npm sẽ tìm kiếm tập tin <a href="https://github.com/twbs/bootstrap/blob/master/package.json"><code>package.json</code></a> và tự động cài đặt tính phụ thuộc được liệt kê trong tập tin này.</li>
+  </ol>
+
+  <p>Sau khi cài đặt xong, bạn sẽ có thể chạy các lệnh Grunt từ màn hình command-line.</p>
+
+  <h2 id="grunt-commands">Các lệnh Grunt sẵn có</h2>
+  <h3><code>grunt dist</code> (chỉ biên dịch CSS và Javascript)</h3>
+  <p>Tái tạo lại thư mục <code>/dist/</code> với các tập tin CSS và Javascript đã được biên dịch và nén lại. Nếu bạn là người sử dụng Bootstrap, thì thông thường đây là lệnh mà bạn sẽ sử dụng.</p>
+
+  <h3><code>grunt watch</code> (Theo dõi)</h3>
+  <p>Theo dõi các tập tin mã nguồn Less và tự động biên dịch lại các tập tin CSS bất cứ khi nào có thay đổi.</p>
+
+  <h3><code>grunt test</code> (Chạy kiểm thử)</h3>
+  <p>Chạy <a href="http://jshint.com">JSHint</a> và chạy các kiểm thử <a href="http://qunitjs.com">QUnit</a> trên cùng trong <a href="http://phantomjs.org">PhantomJS</a>.</p>
+
+  <h3><code>grunt</code> (Tạo nên tất cả mọi thứ và chạy kiểm thử)</h3>
+  <p>Biên dịch và nén CSS với Javascript, xây dựng tài liệu hướng dẫn sử dụng, chạy HTML5 validator so sánh với tài liệu, tái tạo lại các tài nguyên Customizer và nhiều hơn thế nữa. Lệnh này thường chỉ cần thiết khi bạn muốn can thiệp vào Bootstrap.</p>
+
+  <h2 id="grunt-troubleshooting">Vấn đề</h2>
+  <p>Nếu bạn gặp các vấn đề khi cài đặt sự phụ thuộc hoặc chạy các lệnh Grunt thì trước hết hãy xóa bỏ thư mục <code>/node_modules/</code> được tạo ra bởi npm. Sau đó, hãy chạy lại lệnh <code>npm install</code>.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="template" class="page-header">Template cơ bản</h1>
+
+  <p class="lead">Hãy bắt đầu với template cơ bản này, hoặc chỉnh sửa <a href="#examples">các ví dụ này</a>. Chúng tôi hy vọng bạn sẽ thay đổi các template và ví dụ của chúng tôi để phù hợp với nhu cầu của bạn.</p>
+
+  <p>Hãy copy đoạn mã HTML bên dưới để bước đầu làm việc với Bootstrap.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;en&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+
+    <span class="c">&lt;!-- Bootstrap --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;</span>
+    <span class="c">&lt;!-- WARNING: Respond.js doesn&#39;t work if you view the page via file:// --&gt;</span>
+    <span class="c">&lt;!--[if lt IE 9]&gt;</span>
+<span class="c">      &lt;script src=&quot;https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class="c">      &lt;script src=&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;</span>
+<span class="c">    &lt;![endif]--&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+
+    <span class="c">&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="examples" class="page-header">Các ví dụ</h1>
+
+  <p class="lead">Các ví dụ sau đây được xây dựng bằng cách kết hợp template cơ bản bên trên cùng với các thành phần của Bootstrap. Hãy tham khảo <a href="#customizing">Tùy biến Bootstrap</a> để biết thêm một số gợi ý trong việc duy trì các biến thể Bootstrap của riêng bạn.</p>
+
+  <h3 id="examples-framework">Sử dụng framework</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/starter-template/">
+        <img src="../examples/screenshots/starter-template.jpg" alt="">
+      </a>
+      <h4>Template khởi đầu</h4>
+      <p>Template này chỉ bao gồm CSS và Javascript đã biên dịch và một container.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/theme/">
+        <img src="../examples/screenshots/theme.jpg" alt="">
+      </a>
+      <h4>Theme của Bootstrap</h4>
+      <p>Tăng kinh nghiệm người dùng trực quan hơn.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/grid/">
+        <img src="../examples/screenshots/grid.jpg" alt="">
+      </a>
+      <h4>Lưới</h4>
+      <p>Gồm rất nhiều các ví dụ khác nhau về bố cục dạng lưới.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/jumbotron/">
+        <img src="../examples/screenshots/jumbotron.jpg" alt="">
+      </a>
+      <h4>Jumbotron</h4>
+      <p>Được xây dựng dựa trên các thành phần jumbotron và thanh điều hướng cùng với một hệ thống lưới cơ bản.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/jumbotron-narrow/">
+        <img src="../examples/screenshots/jumbotron-narrow.jpg" alt="">
+      </a>
+      <h4>Jumbotron hẹp</h4>
+      <p>Xây dựng nên nhiều trang tùy biến bằng cách thu hẹp container và jumbotron mặc định.</p>
+    </div>
+  </div>
+
+  <h3 id="examples-navbars">Ví dụ trực tiếp về thanh điều hướng</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/navbar/">
+        <img src="../examples/screenshots/navbar.jpg" alt="">
+      </a>
+      <h4>Thanh điều hướng</h4>
+      <p>Template rất cơ bản bao gồm một thanh điều hướng cùng với một chút nội dung.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/navbar-static-top/">
+        <img src="../examples/screenshots/navbar-static.jpg" alt="">
+      </a>
+      <h4>Thanh điều hướng không cố định (static-top)</h4>
+      <p>Template rất cơ bản bao gồm một thanh điều hướng static-top với một chút nội dung.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/navbar-fixed-top/">
+        <img src="../examples/screenshots/navbar-fixed.jpg" alt="">
+      </a>
+      <h4>Thanh điều hướng cố định</h4>
+      <p>Template rất cơ bản bao gồm một thanh điều hướng cố định với một chút nội dung.</p>
+    </div>
+  </div>
+
+  <h3 id="examples-custom">Tùy biến các thành phần</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/cover/">
+        <img src="../examples/screenshots/cover.jpg" alt="">
+      </a>
+      <h4>Cover</h4>
+      <p>Một template dạng one-page được sử dụng đẻ xây dựng nên những trang chủ đơn giản mà đẹp mắt.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/carousel/">
+        <img src="../examples/screenshots/carousel.jpg" alt="">
+      </a>
+      <h4>Carousel</h4>
+      <p>Tùy biến thanh điều hướng và carousel và kết hợp với một số thành phần mới khác.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/blog/">
+        <img src="../examples/screenshots/blog.jpg" alt="">
+      </a>
+      <h4>Blog</h4>
+      <p>Bố cục 2 cột đơn giản của blog với thanh điều hướng, header và type đã được tùy biến.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/dashboard/">
+        <img src="../examples/screenshots/dashboard.jpg" alt="">
+      </a>
+      <h4>Bảng điều khiển</h4>
+      <p>Cấu trúc cơ bản của bảng điều khiển cho admin với thanh điều hướng và sidebar cố định.</p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/signin/">
+        <img src="../examples/screenshots/sign-in.jpg" alt="">
+      </a>
+      <h4>Trang đăng nhập</h4>
+      <p>Thay đổi thiết kế và bố cục của form để tạo ra một form đăng nhập đơn giản.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/justified-nav/">
+        <img src="../examples/screenshots/justified-nav.jpg" alt="">
+      </a>
+      <h4>Thanh điều hướng căn đều</h4>
+      <p>Tạo ra một thanh điều hướng với các thành phần được căn đều. Hãy tham khảo <a href="../components/#nav-justified">Không cần quá thân thiện với WebKit.</a></p>
+    </div>
+    <div class="clearfix visible-xs"></div>
+
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/sticky-footer/">
+        <img src="../examples/screenshots/sticky-footer.jpg" alt="">
+      </a>
+      <h4>Sticky footer</h4>
+      <p>Gắn chặt footer vào phía dưới cùng của khung nhìn khi nội dung hiển thị quá ngắn.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/sticky-footer-navbar/">
+        <img src="../examples/screenshots/sticky-footer-navbar.jpg" alt="">
+      </a>
+      <h4>Sticky footer và thanh điều hướng</h4>
+      <p>Gắn chặt footer vào phía dưới cùng với thanh điều hướng cố định bên trên của khung nhìn.</p>
+    </div>
+  </div>
+
+  <h3 id="examples-experiments">Thử nghiệm</h3>
+  <div class="row bs-examples">
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/non-responsive/">
+        <img src="../examples/screenshots/non-responsive.jpg" alt="">
+      </a>
+      <h4>Bootstrap không responsive</h4>
+      <p>Bạn có thể dễ dàng vô hiệu hóa khả năng responsive của Bootstrap bằng cách tham khảo <a href="#disable-responsive">tài liệu của chúng tôi ở đây</a>.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/offcanvas/">
+        <img src="../examples/screenshots/offcanvas.jpg" alt="">
+      </a>
+      <h4>Offcanvas</h4>
+      <p>Xây dựng nên một menu điều hướng dạng đóng/mở off-canvas để sử dụng.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <a class="thumbnail" href="../examples/equal-height-columns/">
+        <img src="../examples/screenshots/equal-height-columns.jpg" alt="">
+      </a>
+      <h4>Hệ thống cột có chiều cao bằng nhau của lưới</h4>
+      <p>Thêm hệ thống cột có chiều cao bằng nhau vào hệ thống lưới hiện tại của Bootstrap.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="community" class="page-header">Cộng đồng</h1>
+
+  <p class="lead">Hãy cập nhật sự phát triển của Bootstrap và hòa nhập với cộng đồng của chúng tôi bằng những tài nguyên sau đây:</p>
+  <ul>
+    <li>Hãy đọc và subscribe trang <a href="http://blog.getbootstrap.com/">Blog chính thức của Bootstrap</a>.</li>
+    <li>Hãy tán gẫu với các Bootstrapper bằng cách sử dụng IRC tại server <code>irc.freenode.net</code>, trên kênh <a href="irc://irc.freenode.net/#twitter-bootstrap">##twitter-bootstrap</a>.</li>
+    <li>Để được trợ giúp khi sử dụng Bootstrap, hãy đặt câu hỏi trên <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap-3">StackOverflow bằng cách sử dụng thẻ <code>twitter-bootstrap-3</code></a>.</li>
+    <li>Hãy tìm kiếm những ví dụ được xây dựng bằng Bootstrap trên <a href="http://expo.getbootstrap.com">Triển lãm Bootstrap</a>.</li>
+  </ul>
+  <p>Bạn cũng có thể follow <a href="https://twitter.com/twbootstrap">@twbootstrap trên Twitter</a> để luôn được cập nhật tin tức mới nhất về Bootstrap.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="disable-responsive" class="page-header">Vô hiệu hóa tính năng Responsive</h1>
+
+  <p class="lead">Mặc đinh, Bootstrap sẽ tự động thay đổi các trang của bạn cho phù hợp với các kích thước màn hình khác nhau.
+    Tuy nhiên nếu như bạn muốn vô hiệu hóa tính năng này, hãy tham khảo tài liệu của chúng tôi bên dưới, và khi đó trang web của bạn sẽ hoạt động giống như <a href="../examples/non-responsive/">ví dụ này</a>.</p>
+
+  <h3>Các bước để vô hiệu hóa tính năng responsive</h3>
+  <ol>
+    <li>Hãy bỏ thẻ <code>&lt;meta&gt;</code> viewport đã được đề cập đến trong <a href="../css/#overview-mobile">tài liệu CSS</a></li>
+    <li>Hãy ghi đè thuộc tính <code>width</code> trên <code>.container</code> đối với mỗi cột trong hệ thống lưới, ví dụ <code>width: 970px !important;</code> Hãy chắc chắn rằng, các mã CSS tùy biến này được tích hợp vào sau CSS mặc định của Bootstrap. Bạn cũng có thể tránh sử dụng <code>!important</code> bằng các media query hoặc một số selector-fu.</li>
+    <li>Nếu bạn sử dụng thanh điều hướng, hãy vô hiệu hóa toàn bộ các tính năng thu gọn và mở rộng trên thanh điều hướng đó.</li>
+    <li>Đối với các bố cục dạng lưới, hãy sử dụng class <code>.col-xs-*</code> bằng cách thêm vào hoặc thay thế cho các class medium/large. Đừng lo lắng, hệ thống lưới trên các thiết bị có màn hình siêu nhỏ sẽ tự động co giãn đối với mọi độ phân giải.</li>
+  </ol>
+  <p>Bạn sẽ vẫn cần phải có Respond.js để chạy được trên trình duyệt IE8 (vì các media query của chúng tôi vẫn ở đó và cần được xử lý).</p>
+
+  <h3>Template của Bootstrap với tính năng responsive bị vô hiệu hóa</h3>
+  <p>Ví dụ sau đây được tạo ra bằng cách áp dụng những bước đã nói ở trên, hãy tham khảo mã nguồn của nó để thấy được những thay đổi được áp dụng.</p>
+  <p>
+    <a href="../examples/non-responsive/" class="btn btn-primary">Xem ví dụ về vô hiệu hóa tính năng responsive</a>
+  </p>
+</div>
+
+
+<!-- Cross link to new migration page -->
+<div class="bs-callout bs-callout-info" id="migration">
+  <h4>Chuyển đổi từ phiên bản 2.x tới 3.x</h4>
+  <p>Bạn đang tìm cách chuyển đổi từ các phiên bản cũ hơn của Bootstrap lên phiên bản 3.x? Hãy tham khảo <a href="../migration">hướng dẫn chuyển đổi của chúng tôi</a>.</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="support" class="page-header">Hỗ trợ các trình duyệt và các thiết bị</h1>
+  <p class="lead">Bootstrap được xây dựng để hoạt động ổn định nhất với các trình duyệt mới nhất trên máy tính để bàn và các thiết bị di động, điều đó có nghĩa là các trình duyệt cũ có thể hiển thị các style khác đi mặc dù vẫn có đầy đủ chức năng khi các thành phần được tạo ra.</p>
+
+  <h3 id="support-browsers">Các trình duyệt được hỗ trợ</h3>
+  <p>Cụ thể, chúng tôi hỗ trợ <strong>phiên bản mới nhất</strong> cho các trình duyệt và nền tảng sau đây. Trên Windows, <strong>chúng tôi hỗ trợ các trình duyệt từ IE8-IE11</strong>. Hãy xem bảng bên dưới để biết thêm chi tiết.</p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td></td>
+          <th>Chrome</th>
+          <th>Firefox</th>
+          <th>Internet Explorer</th>
+          <th>Opera</th>
+          <th>Safari</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Android</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-muted" rowspan="3" style="vertical-align: middle;">N/A</td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Hỗ trợ</span></td>
+          <td class="text-muted">N/A</td>
+        </tr>
+        <tr>
+          <th>iOS</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-muted">N/A</td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+        </tr>
+        <tr>
+          <th>Mac OS X</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+        </tr>
+        <tr>
+          <th>Windows</th>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> <span class="sr-only">Hỗ trợ</span></td>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> <span class="sr-only">Not Hỗ trợ</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Bootstrap cũng hoạt động tốt trên các trình duyệt Chromium và trình duyệt Chrome trong Linux, Firefox trong Linux và Internet Explorer 7, mặc dù các trình duyệt này không được hỗ trợ một cách chính thức.</p>
+  <p>Để xem danh sách các lỗi trình duyệt mà Bootstrap gặp phải, hãy tham khảo phần <a href="../browser-bugs/">Lỗi trình duyệt</a>.</p>
+
+  <h3 id="support-ie8-ie9">Trình duyệt Internet Explorer 8 và 9</h3>
+  <p>Trình duyệt Internet Explorer 8 và 9 cũng được hỗ trợ, tuy nhiên có một số thuộc tính CSS và phần tử HTML5 không được hỗ trợ một cách đầy đủ trên các trình duyệt này. Ngoài ra, <strong>Trình duyệt Internet Explorer 8 đòi hỏi việc sử dụng <a href="https://github.com/scottjehl/Respond">Respond.js</a> để hỗ trợ cho media query.</strong></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col" class="col-xs-4">Tính năng</th>
+          <th scope="col" class="col-xs-4">Internet Explorer 8</th>
+          <th scope="col" class="col-xs-4">Internet Explorer 9</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row"><code>border-radius</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> Không hỗ trợ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> Hỗ trợ</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>box-shadow</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> Không hỗ trợ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> Hỗ trợ</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>transform</code></th>
+          <td class="text-danger"><span class="glyphicon glyphicon-remove"></span> Không hỗ trợ</td>
+          <td class="text-success"><span class="glyphicon glyphicon-ok"></span> Hỗ trợ, với tiền tố <code>-ms</code></td>
+        </tr>
+        <tr>
+          <th scope="row"><code>transition</code></th>
+          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove"></span> Không hỗ trợ</td>
+        </tr>
+        <tr>
+          <th scope="row"><code>placeholder</code></th>
+          <td colspan="2" class="text-danger"><span class="glyphicon glyphicon-remove"></span> Không hỗ trợ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Hãy tham khảo <a href="http://caniuse.com/">Can I use...</a> để biết thêm chi tiết về các tính năng CSS3 và HTML5 mà trình duyệt hỗ trợ.</p>
+
+  <h3 id="support-ie8-respondjs">Trình duyệt Internet Explorer 8 và Respond.js</h3>
+  <p>Hãy cẩn thận với các vấn đề khi sử dụng Respond.js trong môi trường phát triển và triển khai cua bạn trên trình duyệt Internet Explorer 8.</p>
+  <h4 id="respond-js-x-domain">Respond.js và cross-domain CSS</h4>
+  <p>Việc sử dụng Respond.js cùng với CSS được lưu trữ trên một (sub)domain khác (ví dụ như trên CDN) đòi hỏi thêm một số thiết lập. <a href="https://github.com/scottjehl/Respond/blob/master/README.md#cdnx-domain-setup">Hãy tham khảo tài liệu về Respond.js</a> để biết thêm chi tiết.</p>
+  <h4 id="respond-file-proto">Respond.js and <code>file://</code></h4>
+  <p>Do các quy tắc bảo mật của trình duyệt, Respond.js sẽ không hoạt động với những trang được truy cập thông qua giao thức <code>file://</code> (giống như khi mở một tập tin HTML trên máy tính của bạn). Để kiểm thử tính năng responsive trên trình duyệt IE8, hãy xem trang của bạn được truy cập thông qua giao thức HTTP(S). <a href="https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats">Hãy tham khảo tài liệu Respond.js</a> để biết thêm chi tiết.</p>
+  <h4 id="respond-import">Respond.js and <code>@import</code></h4>
+  <p>Respond.js không hoạt động với CSS được tham chiếu bằng <code>@import</code>. Tuy nhiên, một vài thiết lập cấu hình của Drupal có thể sử dụng <code>@import</code>. <a href="https://github.com/scottjehl/Respond/blob/master/README.md#support--caveats">Hãy tham khảo tài liệu Respond.js</a> để biết thêm chi tiết.</p>
+
+  <h3 id="support-ie8-box-sizing">Trình duyệt Internet Explorer 8 và box-sizing</h3>
+  <p>Trình duyệt IE8 không hỗ trợ thuộc tính <code>box-sizing: border-box;</code> một cách đầy đủ khi kết hợp cùng với <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, hoặc <code>max-height</code>. Vì lý do đó, trong phiên bản v3.0.1, chúng tôi không còn sử dụng <code>max-width</code> trên các <code>.container</code> nữa.</p>
+
+  <h3 id="support-ie-compatibility-modes">Các chế độ tương thích với trình duyệt Internet Explorer</h3>
+  <p>Bootstrap không được hỗ trợ một cách đầy đủ trên các trình duyệt IE cũ. Để chắc chắn rằng bạn đang sử dụng chế độ render mới nhất trong IE, hãy thêm thẻ <code>&lt;meta&gt;</code> thích hợp vào các trang của bạn:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span></code></pre></div>
+  <p>Xác nhận chế độ document bằng cách mở các công cụ debug: Hãy nhấn <kbd>F12</kbd> và click vào mục "Document Mode".</p>
+  <p>Thẻ này đã được tích hợp sẵn trong toàn bộ các ví dụ và tài liệu hướng dẫn sử dụng của Bootstrap để đảm bảo việc render tốt nhất trên mỗi phiên bản Internet Explorer.</p>
+  <p>Hãy tham khảo <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge">câu hỏi StackOverflow này</a> để biết thêm chi tiết.</p>
+
+  <h3 id="support-ie10-width">Trình duyệt Internet Explorer 10 trong Windows 8 và Windows Phone 8</h3>
+  <p>Trình duyệt Internet Explorer 10 không phân biệt <strong>chiều rộng của thiết bị</strong> với <strong>chiều rộng của khung nhìn</strong>, và vì vậy, nó sẽ không áp dụng các media query một cách thích hợp. Thông thường, bạn chỉ phải thêm một đoạn mã ngắn CSS để sửa lỗi này:</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+  <p>Tuy nhiên, đoạn mã trên không hoạt động với các thiết bị chạy các phiên bản Windows Phone 8 cũ hơn <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Update 3 (a.k.a. GDR3)</a>. Vì thế, nó sẽ gây ra lỗi hiển thị khung nhìn của desktop thay vì khung nhìn hẹp của điện thoại. Để giải quyết vấn đề này, bạn sẽ phải tích hợp thêm <strong>mã CSS và Javascript sau</strong>.</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@-webkit-viewport</span>   <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-moz-viewport</span>      <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@-o-viewport</span>        <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">@viewport</span>           <span class="p">{</span> <span class="na">width</span><span class="o">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/IEMobile\/10\.0/</span><span class="p">))</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">msViewportStyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;style&#39;</span><span class="p">)</span>
+  <span class="nx">msViewportStyle</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span>
+      <span class="s1">&#39;@-ms-viewport{width:auto!important}&#39;</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">msViewportStyle</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
+  <p>Để biết thêm thông tin chi tiết và hướng dẫn sử dụng, hãy tham khảo <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">Windows Phone 8 và chiều rộng của thiết bị</a>.</p>
+  <p>Theo mặc định, chúng tôi đã tích hợp sẵn các đoạn mã này vào toàn bộ các ví dụ và tài liệu của Bootstrap.</p>
+
+  <h3 id="support-safari-percentages">Vấn đề làm tròn tỷ lệ phần trăm trong trình duyệt Safari</h3>
+  <p>Khi sử dụng trình duyệt Safari phiên bản v7.0.1 trên hệ điều hành OS X và trình duyệt Safari trên hệ điều hành iOS v7.0.1, bộ máy render của Safari có một số vấn đề với số lượng các chữ số thập phân được sử dụng trong các class lưới <code>.col-*-1</code> của chúng tôi. Vì thế, nếu bạn có một hệ thống lưới gồm 12 cột, bạn sẽ để ý thấy chúng có chiều rộng ngăn hơn so với các hàng của cột khác (Hãy xem <a href="https://github.com/twbs/bootstrap/issues/9282">#9282</a>). Bạn có một vài tùy chọn để giải quyết vấn đề này:</p>
+  <ul>
+    <li>Thêm class <code>.pull-right</code> vào cột cuối cùng trong hệ thống lưới để thực hiện căn phải một cách bắt buộc</li>
+    <li>Tinh chỉnh tỷ lệ phần trăm của bạn bằng tay (khó hơn rất nhiều so với tùy chọn 1)</li>
+  </ul>
+  <p>Chúng tôi sẽ luôn theo dõi vấn đề này và sẽ cập nhật giải pháp ngay khi chúng tôi tìm ra.</p>
+
+  <h3 id="support-fixed-position-keyboards">Modal, thanh điều hướng và bàn phím ảo</h3>
+  <h4>Overflow và scrolling</h4>
+  <p>Việc hỗ trợ thuộc tính <code>overflow: hidden</code> trên phần tử <code>&lt;body&gt;</code> bị giới hạn trên trên iOS và Android. Để chấm dứt vấn đề này, khi bạn cuộn qua mép trên hoặc mép dưới của một modal trên các trình duyệt của những thiết bị sử dụng iOS hoặc Android, nội dung của <code>&lt;body&gt;</code> sẽ bắt đầu cuộn xuống.</p>
+  <h4>Bàn phím ảo</h4>
+  <p>Ngoài ra, lưu ý rằng nếu bạn sử dụng input trong các modal hoặc thanh điều hướng của bạn, iOS có một lỗi render là không cập nhật vị trí của các phần tử cố định khi bàn phím ảo được kích hoạt. Một số giải pháp cho vấn đề này bao gồm việc biến đổi các phần tử của bạn thành <code>position: absolute</code> hoặc kích hoạt một timer khi focus để cố gắng sửa vị trí một cách thủ công. Vấn đề này không được xử lý bởi Bootstrap, vì thế bạn cần tự quyết định xem giải pháp nào là phù hợp vói nhu cầu của bạn.</p>
+  <h4>Menu sổ xuống nằm trong thanh điều hướng</h4>
+  <p>Phần tử <code>.dropdown-backdrop</code> không được sử dụng trong các thành phần điều hướng trên iOS do sự phức tạp của thuộc tính z-index. Vì thế, để đóng một menu sổ xuống trong thanh điều hướng, bạn phải click trực tiếp vào phần tử menu sổ xuống (hoặc các phần tử khác sẽ kích hoạt sự kiện click trong iOS).</p>
+
+  <h3 id="support-browser-zooming">Phóng to trong trình duyệt</h3>
+  <p>Khi phóng to một trang web trên trình duyệt, sẽ không thể tránh khỏi việc các thành phần bị hiển thị lỗi. Tùy thuộc vào từng vấn đề, chúng tôi có thể giải quyết được nó (trước hết là tìm kiếm và sau đó là mở ra một issue nếu cần). Tuy nhiên, chúng tôi có thiên hướng bỏ qua các vấn đề này vì dường như không có giải pháp trực tiếp nào tốt hơn giải pháp "hack".</p>
+
+  <h3 id="support-printing">Khung nhìn khi in ấn</h3>
+  <p>Thậm chí trên các trình duyệt hiện đại, việc in ấn nhiều khi được thực hiện hơi kỳ quặc. Cụ thể, như trong trình duyệt Chrome phiên bản v32, bất kể thiết lập margin như thế nào, Chrome sử dụng một khung nhìn có chiều rộng hẹp hơn đáng kể so với kích thước thực tế của một tờ giấy khi xử lý các media query trong khi in một trang nào đó. Điều này có thể dẫn đến dạng extra-small trong hệ thống lưới hiển thị không như mong muốn. <a href="https://github.com/twbs/bootstrap/issues/12078">Hãy tham khảo issue #12078 để biết thêm chi tiết.</a> Chúng tôi gợi ý một số giải pháp như sau:</p>
+  <ul>
+    <li>Hạn chế sử dụng lưới dạng extra-small và chắc chắn rằng trang web của bạn trông có thể chấp nhận được.</li>
+    <li>Tùy chỉnh giá trị của các biến số Less <code>@screen-*</code> để tờ giấy in của bạn trong có vẻ lớn hơn kích thước extra-small.</li>
+    <li>Thêm các media query tùy biến để thay đổi các mốc kích thước trong lưới chỉ trong trường hợp phục vụ in ấn.</li>
+  </ul>
+
+  <h3 id="support-android-stock-browser">Trình duyệt trên Android</h3>
+  <p>Ngoài ra, Hệ điều hành Android 4.1 (và thậm chí các phiên bản mới hơn) luôn đi kèm với một ứng dụng trình duyệt mặc định (đối lập với Chrome). Thật không may, ứng dụng trình duyệt đó luôn có rất nhiều lỗi và không đồng nhất với CSS nói chung.</p>
+  <h4>Các menu select</h4>
+  <p>Trên các phần tử <code>&lt;select&gt;</code>, các trình duyệt đi kèm với hệ điều hành Android không hiển thị mũi tên điều khiển phía bên phải nếu như có thuộc tính <code>border-radius</code> và/hoặc <code>border</code> được sử dụng. (Hãy tham khảo <a href="http://stackoverflow.com/questions/14744437/html-select-box-not-showing-drop-down-arrow-on-android-version-4-0-when-set-with">câu hỏi StackOverflow này</a> để biết thêm chi tiêt.) Hãy sử dụng đoạn mã sau đây để loại bỏ CSS và hiển thị <code>&lt;select&gt;</code> như một phần tử không được style trên các trình duyệt đi kèm với Android. User-agent tránh xung đột với các trình duyệt Chrome, Safari và Mozilla.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">nua</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span>
+  <span class="kd">var</span> <span class="nx">isAndroid</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Mozilla/5.0&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Android &#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;AppleWebKit&#39;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="nx">nua</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;Chrome&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">isAndroid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;select.form-control&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;form-control&#39;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="s1">&#39;100%&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+  <p>Nếu bạn muốn thấy một ví dụ cụ thể, hãy <a href="http://jsbin.com/OyaqoDO/2">tham khảo vấn đề này trên JS Bin.</a></p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="third-parties" class="page-header">Hỗ trợ bên thứ ba</h1>
+  <p class="lead">Mặc dù chúng tôi không hỗ trợ bất kỳ plugin hoặc add-on nào của bên thứ 3 một cách chính thức, chúng tôi vẫn có một vài lời khuyên hỗ trợ bạn tránh khỏi các lỗi tiềm tàng trong các dự án của bạn.</p>
+
+  <h3 id="third-box-sizing">Box-sizing</h3>
+  <p>Một vài ứng dụng của bên thứ 3, bao gồm cả Google Maps và bộ máy tìm kiếm Google, đều bị xung đột với Bootstrap do <code>* { box-sizing: border-box; }</code>, một thuộc tính để <code>padding</code> không làm ảnh hưởng đến chiều rộng được tính toán cuối cùng của một phần tử. Hãy tham khảo <a href="http://css-tricks.com/box-sizing/">box model và sizing trên CSS Tricks</a> để biết thêm chi tiết.</p>
+  <p>Phụ thuộc vào từng ngữ cảnh, có thể bạn phải ghi đè nếu cần (tùy chọn 1) hoặc reset box-sizing trong tất cả các vùng (Option 2).</p>
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Box-sizing resets</span>
+<span class="cm"> *</span>
+<span class="cm"> * Reset individual elements or override regions to avoid conflicts due to</span>
+<span class="cm"> * global box model settings of Bootstrap. Two options, individual overrides and</span>
+<span class="cm"> * region resets, are available as plain CSS and uncompiled Less formats.</span>
+<span class="cm"> */</span>
+
+<span class="cm">/* Option 1A: Override a single element&#39;s box model via CSS */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="na">-webkit-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="na">-moz-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="na">box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 1B: Override a single element&#39;s box model by using a Bootstrap Less mixin */</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">);</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 2A: Reset an entire region via CSS */</span>
+<span class="nc">.reset-box-sizing</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+<span class="nc">.reset-box-sizing</span> <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+  <span class="na">-webkit-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="na">-moz-box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="na">box-sizing</span><span class="o">:</span> <span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Option 2B: Reset an entire region with a custom Less mixin */</span>
+<span class="nc">.reset-box-sizing</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="o">,</span>
+  <span class="o">*,</span>
+  <span class="o">*</span><span class="nd">:before</span><span class="o">,</span>
+  <span class="o">*</span><span class="nd">:after</span> <span class="p">{</span>
+    <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="nc">.reset-box-sizing</span><span class="o">();</span>
+<span class="p">}</span></code></pre></div>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="accessibility" class="page-header">Vấn đề truy nhập</h1>
+  <p class="lead">Bootstrap được xây dựng tuân theo các chuẩn Web nói chung và&mdash;với một ít nỗ lực&mdash;có thể được sử dụng để tạo ra các site mà có thể truy cập được bằng cách sử dụng <abbr title="Assistive Technology" class="initialism">AT</abbr>.</p>
+
+  <h3>Bỏ qua thanh điều hướng</h3>
+  <p>Nếu như thanh điều hướng của bạn chứa nhiều liên kết và hiển thị trước nội dung chính trong DOM, hãy thêm một liên kết <code>Skip to main content</code> (Chuyển đến nội dung chính) ngay sau thẻ <code>&lt;body&gt;</code>. <a href="http://a11yproject.com/posts/skip-nav-links/">hãy tham khảo ở đây để biết nguyên nhân</a></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#content&quot;</span> <span class="na">class=</span><span class="s">&quot;sr-only sr-only-focusable&quot;</span><span class="nt">&gt;</span>Skip to main content<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
+    The main page content.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span></code></pre></div>
+
+  <h3>Các heading lồng nhau</h3>
+  <p>When lồng các heading vào nhau (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>), heading chính trong trang của bạn phải là <code>&lt;h1&gt;</code>. Các heading tiếp theo nên sử dụng <code>&lt;h2&gt;</code> - <code>&lt;h6&gt;</code> để các trình đọc màn hình có thể tạo ra mục lục cho các trang của bạn.</p>
+  <p>Hãy tham khảo <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/Section508/">HTML CodeSniffer</a> và <a href="http://accessibility.psu.edu/headings">Penn State's AccessAbility</a>.</p>
+
+  <h3>Các tài liệu khác</h3>
+  <ul>
+    <li><a href="https://github.com/squizlabs/HTML_CodeSniffer">"HTML Codesniffer" bookmarklet được sử dụng để nhận dạng các vấn đề truy nhập</a></li>
+    <li><a href="http://a11yproject.com/">Dự án A11Y</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Accessibility">Tài liệu về tính truy nhập MDN</a></li>
+  </ul>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="license-faqs" class="page-header">Các câu hỏi thường gặp về bản quyền</h1>
+  <p class="lead">Bootstrap được phát hành với giấy phép MIT và bản quyền Twitter 2015. Vè cơ bản, nó có thể được mô tả bằng những điều kiện sau.</p>
+
+  <h4>Yêu cầu người sử dụng phải:</h4>
+  <ul>
+    <li>Tích hợp những lưu ý về giấy phép và bản quyền khi bạn sử dụng</li>
+  </ul>
+
+  <h4>Cho phép người sử dụng:</h4>
+  <ul>
+    <li>Toàn quyền download và sử dụng một phần hoặc toàn bộ Bootstrap để phục vụ cho các mục đích cá nhân, dùng cho nội bộ công ty hoặc các mục đích thương mại</li>
+    <li>Sử dụng Bootstrap dưới dạng đóng gói hoặc phân phối mà bạn tạo ra</li>
+    <li>Chỉnh sửa mã nguồn</li>
+    <li>Tạo ra giấy phép bổ sung để chỉnh sửa và phân phối Bootstrap tới bên thứ 3 không nằm trong giấy phép đã có</li>
+  </ul>
+
+  <h4>Không cho phép người sử dụng:</h4>
+  <ul>
+    <li>Hold the authors and license owners liable for damages as Bootstrap is provided without warranty</li>
+    <li>Giữ người tạo ra hoặc người nắm giữ bản quyền của Bootstrap</li>
+    <li>Phân phối lại Bootstrap mà không có bất kỳ đóng góp gì</li>
+    <li>Sử dụng bất kỳ dấu hiệu nào được sở hữu bởi Twitter dưới bất kỳ hình thức nào ám chỉ Twitter chứng thực bản phân phối của bạn</li>
+    <li>Sử dụng bất kỳ dấu hiệu nào được sở hữu bởi Twitter dưới bất kỳ hình thức nào ám chỉ hoặc tạo ra nghi vấn việc bạn đã tạo ra phần mềm Twitter</li>
+  </ul>
+
+  <h4>Không yêu cầu người sử dụng:</h4>
+  <ul>
+    <li>Tích hợp mã nguồn gốc của Bootstrap, hoặc của bất kỳ bản sửa đổi nào, trong bất kỳ bản phân phối lại nào</li>
+    <li>Submit những thay đổi của bạn đối với Bootstrap ngược trở lại dự án Bootstrap hiện tại (mặc dù chúng tôi khuyến khích những phản hồi như thế nhưng không bắt buộc)</li>
+  </ul>
+
+  <p>Nguyên văn giấy phép của Bootstrap được lưu trữ tại <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">đây</a>. Hãy tham khảo để biết thêm thông tin chi tiết</p>
+</div>
+
+<div class="bs-docs-section">
+  <h1 id="translations" class="page-header">Các bản dịch</h1>
+
+  <p class="lead">Cộng đồng của chúng tôi đã dịch tài liệu này ra thành nhiều ngôn ngữ khác nhau. Không có bản dịch nào được hỗ trợ một cách chính thức và có thể chúng không được cập nhật một cách thường xuyên.</p>
+  <ul>
+    
+      <li><a href="http://v3.bootcss.com/" hreflang="zh">Bootstrap 中文文档 (Chinese)</a></li>
+    
+      <li><a href="http://www.oneskyapp.com/docs/bootstrap/fr" hreflang="fr">Bootstrap en Français (French)</a></li>
+    
+      <li><a href="http://holdirbootstrap.de/" hreflang="de">Bootstrap auf Deutsch (German)</a></li>
+    
+      <li><a href="http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/" hreflang="it">Bootstrap in Italiano (Italian)</a></li>
+    
+      <li><a href="http://bootstrapk.com/BS3/" hreflang="ko">Bootstrap 한국어 (Korean)</a></li>
+    
+      <li><a href="http://www.oneskyapp.com/docs/bootstrap/ru" hreflang="ru">Bootstrap по-русски (Russian)</a></li>
+    
+      <li><a href="http://www.oneskyapp.com/docs/bootstrap/es" hreflang="es">Bootstrap en Español (Spanish)</a></li>
+    
+      <li><a href="http://twbs.site-konstruktor.com.ua" hreflang="uk">Bootstrap ua Українською (Ukrainian)</a></li>
+    
+  </ul>
+  <p><strong class="text-danger">Chúng tôi không hỗ trợ việc quản lý và lưu trữ bản dịch, chúng tôi chỉ liên kết đến chúng.</strong></p>
+  <p>Bạn đã hoàn thành một bản dịch mới hoặc tốt hơn? Hãy gửi yêu cầu đến cho chúng tôi để thêm nó vào trong danh sách này.</p>
+</div>
+
+
+        </div>
+        <div class="col-md-3">
+          <div class="bs-docs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-docs-sidenav">
+              
+                <li>
+  <a href="#download">Tải về</a>
+</li>
+<li>
+  <a href="#whats-included">Bên trong có gì</a>
+  <ul class="nav">
+    <li><a href="#whats-included-precompiled">Bootstrap đã biên dịch</a></li>
+    <li><a href="#whats-included-source">Mã nguồn của Bootstrap</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#grunt">Biên dịch CSS và JavaScript</a>
+  <ul class="nav">
+    <li><a href="#grunt-installing">Cài đặt Grunt</a></li>
+    <li><a href="#grunt-commands">Các lệnh Grunt sẵn có</a></li>
+    <li><a href="#grunt-troubleshooting">Vấn đề</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#template">Template cơ bản</a>
+</li>
+<li>
+  <a href="#examples">Các ví dụ</a>
+  <ul class="nav">
+    <li><a href="#examples-framework">Sử dụng framework</a></li>
+    <li><a href="#examples-navbars">Ví dụ trực tiếp về thanh điều hướng</a></li>
+    <li><a href="#examples-custom">Tùy biến các thành phần</a></li>
+    <li><a href="#examples-experiments">Thử nghiệm</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#community">Cộng đồng</a>
+</li>
+<li>
+  <a href="#disable-responsive">Vô hiệu hóa tính năng Responsive</a>
+</li>
+<li>
+  <a href="#migration">Chuyển đổi từ phiên bản 2.x tới 3.x</a>
+</li>
+<li>
+  <a href="#support">Hỗ trợ các trình duyệt và các thiết bị</a>
+  <ul class="nav">
+    <li><a href="#support-browsers">Các trình duyệt được hỗ trợ</a></li>
+    <li><a href="#support-ie8-ie9">IE9 và IE9</a></li>
+    <li><a href="#support-ie8-respondjs">IE8 và Respond.js</a></li>
+    <li><a href="#support-ie8-box-sizing">IE8 và box-sizing</a></li>
+    <li><a href="#support-ie-compatibility-modes">IE Compatibility modes</a></li>
+    <li><a href="#support-ie10-width">IE10 và Windows (Phone) 8</a></li>
+    <li><a href="#support-safari-percentages">Vấn đề làm tròn tỷ lệ phần trăm trong trình duyệt Safari</a></li>
+    <li><a href="#support-fixed-position-keyboards">Modal, thanh điều hướng và bàn phím ảo</a></li>
+    <li><a href="#support-browser-zooming">Phóng to trong trình duyệt</a></li>
+    <li><a href="#support-printing">Khung nhìn khi in ấn</a></li>
+    <li><a href="#support-android-stock-browser">Trình duyệt trên Android</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#third-parties">Hỗ trợ bên thứ ba</a>
+</li>
+<li>
+  <a href="#accessibility">Vấn đề truy nhập</a>
+</li>
+<li>
+  <a href="#license-faqs">Các câu hỏi thường gặp về bản quyền</a>
+</li>
+<li>
+  <a href="#translations">Các bản dịch</a>
+</li>
+
+              
+            </ul>
+            <a class="back-to-top" href="#top">
+              Quay lên trên
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    <div class="bs-docs-social">
+  <ul class="bs-docs-social-buttons">
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+    </li>
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+    </li>
+    <li class="follow-btn">
+      <a href="https://twitter.com/twbootstrap" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @twbootstrap</a>
+    </li>
+    <li class="tweet-btn">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getbootstrap.com/" data-count="horizontal" data-via="twbootstrap" data-related="mdo:Creator of Bootstrap">Tweet</a>
+    </li>
+  </ul>
+</div>
+
+
+    <p>Được thiết kế và phát triển với niềm đam mê vô hạn bởi <a href="http://twitter.com/mdo" target="_blank">@mdo</a> và <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+    <p>Được duy trì bởi <a href="https://github.com/twbs?tab=members">đội ngũ nòng cốt</a> cùng với sự hỗ trợ của <a href="https://github.com/twbs/bootstrap/graphs/contributors">đội ngũ đóng góp của chúng tôi</a>.</p>
+    <p>Mã cấp phép theo <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, tài liệu hướng dẫn theo <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="bs-docs-footer-links muted">
+      <li>Phiên bản hiện tại v3.1.1</li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li>&middot;</li>
+      <li><a href="../getting-started/#examples">Các ví dụ</a></li>
+      <li>&middot;</li>
+      <li><a href="../2.3.2/">Tài liệu phiên bản v2.3.2</a></li>
+      <li>&middot;</li>
+      <li><a href="../about/">Về chúng tôi</a></li>
+      <li>&middot;</li>
+      <li><a href="http://expo.getbootstrap.com">Triển lãm</a></li>
+      <li>&middot;</li>
+      <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Các vấn đề</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/twbs/bootstrap/releases">Các phiên bản</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+
+
+
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
+
+<!-- Analytics
+================================================== -->
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+  </body>
+</html>
